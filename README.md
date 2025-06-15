@@ -1,6 +1,9 @@
 # CryptoPredictor
 $120/monthly, Contact `dev.ro0ti` on Discord. Yes a super advanced tool designed to make passive income.
 
+## Preview
+![alt text](https://github.com/ro0ti/CryptoPredictor/blob/main/preview.png?raw=true)
+
 ## Table of Contents
 - [Data Collection](#data-collection)
 - [Feature Engineering](#feature-engineering)
