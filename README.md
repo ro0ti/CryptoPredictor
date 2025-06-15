@@ -1,27 +1,37 @@
 # CryptoPredictor
 $120/monthly, Contact `dev.ro0ti` on Discord. Yes a super advanced tool designed to make passive income.
 
-## Data Collection
+## Table of Contents
+- [Data Collection](#data-collection)
+- [Feature Engineering](#feature-engineering)
+- [Model Training](#model-training)
+- [Model Management](#model-management)
+- [Risk Management](#risk-management)
+- [Retraining System](#retraining-system)
+- [Monitoring & Evaluation](#monitoring--evaluation)
+- [Technical Implementation](#technical-implementation)
+- [Operational Features](#operational-features)
 
-### Multi-Source Data Integration
+# Data Collection
+## Multi-Source Data Integration
 - **Yahoo Finance API** - Historical OHLCV data
 - **CryptoPanic API** - Cryptocurrency-specific news sentiment
 - **Glassnode API** - On-chain metrics (market/price_usd_close)
 - **NewsAPI** - General financial news sentiment (optional)
 
-### Data Quality Features
+## Data Quality Features
 - Automatic handling of missing data
 - Duplicate removal during merges
 - Type conversion for datetime fields
 
-### Error Handling
+## Error Handling
 - Graceful degradation for API failures
 - Empty DataFrame returns for failed requests
 - Comprehensive error logging with timestamps
 
 ## Feature Engineering
 
-### Technical Indicators
+## Technical Indicators
 | Category          | Indicators                                  |
 |-------------------|--------------------------------------------|
 | Trend             | EMA_10, EMA_30, ADX                        |
@@ -31,23 +41,23 @@ $120/monthly, Contact `dev.ro0ti` on Discord. Yes a super advanced tool designed
 | Cycle             | HT_DCPERIOD                                |
 | Price Transforms  | WCLPRICE                                   |
 
-### Temporal Features
+## Temporal Features
 - Day of week (0-6)
 - Day of month (1-31)
 - Week of year (1-52)
 - Month (1-12)
 
-### Lag Features
+## Lag Features
 - 7-day lagged close prices (lag_1 through lag_7)
 
-### Feature Selection
+## Feature Selection
 - SelectKBest with f_regression scoring
 - Top 15 features automatically selected
 - Persistent feature selector for consistent transforms
 
-## Model Training
+# Model Training
 
-### XGBoost Implementation
+## XGBoost Implementation
 - Randomized hyperparameter search with:
   ```python
   param_grid = {
