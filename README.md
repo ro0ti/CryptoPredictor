@@ -133,15 +133,6 @@ $120/monthly, Contact `dev.ro0ti` on Discord. Yes a super advanced tool designed
  - Significant metric change detection
 
 # Technical Implementation
-## Architecture
-graph TD
-    A[Data Sources] --> B[DataFetcher]
-    B --> C[FeatureEngineer]
-    C --> D[ModelTrainer]
-    D --> E[RiskManager]
-    E --> F[Retrainer]
-    F --> B
-
 ## Key Components
  - **CryptoDataFetcher:** Handles all API interactions
  - **FeatureEngineer:** Creates 50+ derived features
